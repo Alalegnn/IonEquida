@@ -31,7 +31,8 @@ export class UpdateChevalPage {
      this.form = fb.group({
       "cheval_id"                  : [cheval.id,Validators.required],
       "cheval_nom"           : [cheval.nom,Validators.required],
-      "cheval_sexe"           : [cheval.sexe,Validators.required]
+      "cheval_sexe"           : [cheval.sexe,Validators.required],
+      "cheval_prixDepart"     : [cheval.prixDepart,Validators.required]
    });
   }
 
@@ -42,12 +43,14 @@ export class UpdateChevalPage {
   updateCheval() : void {
     let 	cheval_id : number = this.form.controls["cheval_id"].value,
     cheval_nom : string  = this.form.controls["cheval_nom"].value,
-    cheval_sexe : string  = this.form.controls["cheval_sexe"].value;
+    cheval_sexe : string  = this.form.controls["cheval_sexe"].value,
+    cheval_prixDepart : number = this.form.controls["cheval_prixDepart"].value;
 
     let cheval : Cheval = new Cheval(cheval_id,cheval_nom,cheval_sexe);
     cheval.id =	cheval_id;
     cheval.nom = cheval_nom ;
     cheval.sexe = cheval_sexe;
+    cheval.prixDepart = cheval_prixDepart;
 
     console.log(cheval);
 

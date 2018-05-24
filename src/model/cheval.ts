@@ -3,7 +3,7 @@ export class Cheval{
 	public id: number;
 	public nom : string ;
 	public sexe : string ;
-	public prixDepart : string ;
+	public prixDepart : number ;
 	public typeCheval : TypeCheval ;
 
     constructor(id: number, nom : string, sexe: string) {

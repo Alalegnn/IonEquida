@@ -71,7 +71,7 @@ export class ChevauxProvider {
           console.log(cheval)
         
         let headers   : any   = new HttpHeaders({ 'Content-Type': 'application/json' }),
-        options   : any   = { "key" : "updateCheval", "cheval_id" : cheval.id, "cheval_nom" : cheval.nom, "cheval_sexe" : cheval.sexe },
+        options   : any   = { "key" : "updateCheval", "cheval_id" : cheval.id, "cheval_nom" : cheval.nom, "cheval_sexe" : cheval.sexe, "cheval_prixDepart" : cheval.prixDepart },
         url       : any       = this.baseURI + "gestionChevaux.php";
 
         console.log ("avec encodage" + JSON.stringify(options));
