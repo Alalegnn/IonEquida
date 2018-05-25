@@ -14,7 +14,7 @@ import { ToastController } from "ionic-angular";
 @Injectable()
 export class ChevauxProvider {
 
-  private baseURI: string  = "http://localhost/wequida/";
+  private baseURI: string  = "http://prodapache.inforostand14.net/IONAB/";
 
   constructor(public http: HttpClient, public toastCtrl: ToastController) {
   }
